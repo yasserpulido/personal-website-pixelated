@@ -1,3 +1,11 @@
+/*
+  STYLE GUIDE:
+  1.Layout
+  2.Header
+  3.Curriculum
+  4.Media Queries
+*/
+/* --------- 1.Layout --------- */
 @font-face {
   font-family: Dogica;
   src: url("../fonts/PressStart2P.ttf");
@@ -14,53 +22,40 @@ body {
   font-size: 14px;
 }
 
-header {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-header img {
-  height: 100px;
-  image-rendering: pixelated;
-}
-
 p {
   line-height: 1.4rem;
 }
 
-button {
-  top: 90%;
-  left: 90%;
-  background-color: transparent;
-  cursor: url("../images/pointer.png"), pointer;
-  position: fixed;
-  z-index: 1;
-  border: none;
+/* --------- 2.Header --------- */
+header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-button img {
-  height: 2rem;
-  width: 2rem;
+figure {
+  width: 100%;
+}
+
+figure img {
+  width: 100%;
   image-rendering: pixelated;
-  transition: transform 0.2s 0.1s ease-out;
-  animation-name: arrowMovement;
-  animation-duration: 0.8s;
+  animation-name: logo;
+  animation-duration: 1s;
   animation-iteration-count: 4;
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
 }
 
-button img:hover {
-  transform: scale(1.4);
-}
-
-@keyframes arrowMovement {
+@keyframes logo {
   100% {
-    transform: translateY(50%);
+    transform: scale(1.2);
   }
 }
+/* --------- 3.Curriculum --------- */
 .container {
+  max-width: 960px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -114,6 +109,10 @@ button img:hover {
   align-items: center;
 }
 
+.place .icon {
+  margin-right: 0.2rem;
+}
+
 .place > p {
   color: #51a200;
   font-size: 0.8rem;
@@ -164,12 +163,36 @@ footer {
   image-rendering: pixelated;
 }
 
-@media (min-width: 992px) {
-  .container,
-.container-lg,
-.container-md,
-.container-sm {
-    max-width: 960px;
+/* --------- 4.Media Queries --------- */
+@media (max-width: 576px) {
+  body,
+p,
+span,
+.date,
+.description,
+.place p {
+    font-size: 6px;
+  }
+  p {
+    line-height: 0.8rem;
+  }
+  .container {
+    width: 100%;
+  }
+  .title {
+    margin-top: -22px;
+  }
+  .textbox {
+    border-image-width: 16px;
+    border-width: 16px;
+  }
+  .border {
+    border-image-width: 16px;
+    border-width: 32px;
+  }
+  .icon {
+    width: 0.6rem;
+    height: 0.6rem;
   }
 }
 
