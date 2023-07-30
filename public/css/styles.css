@@ -26,6 +26,14 @@ p {
   line-height: 1.4rem;
 }
 
+a {
+  color: #ffffff;
+}
+a:hover, a:focus, a:active {
+  color: #ffffff;
+  cursor: url("../images/pointer.png"), default;
+}
+
 /* --------- 2.Header --------- */
 header {
   height: 100vh;
@@ -89,8 +97,6 @@ figure img {
   margin-top: -44px;
   color: #4141ff;
   background-color: #000000;
-  border-left: 8px solid #000000;
-  border-right: 4px solid #000000;
 }
 
 .information {
@@ -101,6 +107,12 @@ figure img {
 .date {
   color: #b2b2b2;
   font-size: 0.8rem;
+}
+
+.personal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .place {
